@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+
+  kong:
+    image: kong:3.3
+    ports:
+      - 8000:8000
+      - 8001:8001
+    volumes:
+      - ./kong.json:/home/kong/kong.json
+    environment:
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl
+      - KONG_DECLARATIVE_CONFIG=/home/kong/kong.json
+      - KONG_DATABASE=off
+
+  test-api:
+    build:
+      context: ./test_api/
+    ports:
+      - 5000:5000

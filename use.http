@@ -1,0 +1,14 @@
+### Test API
+GET http://localhost:5000/customers?n=10&t=1
+
+### kong (GET - no params)
+GET http://localhost:8000/customers
+
+### kong
+GET http://localhost:8000/customers?n=10&t=1
+
+### Update kong config
+POST http://localhost:8001/config
+Content-Type: application/json
+
+< ./kong.json

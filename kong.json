@@ -1,0 +1,24 @@
+{
+    "_format_version": "1.1",
+    "services": [
+        {
+            "id": "92c0cc6a-b7e7-5bd4-939b-720b3aada806",
+            "url": "http://test-api:5000",
+            "name": "TEST_API",
+            "routes": [
+                {
+                    "id": "e867baf3-b852-5102-9d4c-21821056be40",
+                    "methods": [
+                        "GET",
+                        "OPTIONS"
+                    ],
+                    "paths": [
+                        "/customers"
+                    ],
+                    "strip_path": false,
+                    "name": "get_customers"
+                }
+            ]
+        }
+    ]
+}
